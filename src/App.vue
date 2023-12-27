@@ -60,7 +60,34 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gantari', sans-serif;
+}
+
+body {
+  background-color: #000039;
+  color: white;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.score-app {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
 .scorers {
   display: flex;
+  justify-content: space-between;
 }
 </style>

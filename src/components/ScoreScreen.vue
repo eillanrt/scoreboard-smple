@@ -11,4 +11,20 @@ export default {
   props: { score: Number, default: 0 },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+}
+</style>
