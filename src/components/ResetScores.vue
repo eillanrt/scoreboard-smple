@@ -14,20 +14,20 @@ export default {
   justify-content: center;
   align-items: center;
   height: 50px;
-  border: 1px solid black;
   border-radius: 10px;
-  margin: 10px;
+  margin: 50px 10px 10px;
 }
 
-.reset-wrap button {
-  width: 30%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #f5f5f5;
-  font-size: 1.5rem;
-  font-weight: bold;
+button {
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #e2e2e2;
 }
 </style>
