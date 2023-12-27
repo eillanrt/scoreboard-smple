@@ -4,13 +4,17 @@
       <h2>Enter Team Names</h2>
 
       <form @submit.prevent="submitForm">
-        <label for="team1">Team 1:</label>
-        <input id="team1" v-model="team1Name" required />
-
-        <label for="team2">Team 2:</label>
-        <input id="team2" v-model="team2Name" required />
-
-        <button type="submit">Submit</button>
+        <div>
+          <label for="team1">Team 1:</label><br />
+          <input id="team1" v-model="team1Name" required />
+        </div>
+        <div>
+          <label for="team2">Team 2:</label><br />
+          <input id="team2" v-model="team2Name" required />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   </div>
@@ -57,6 +61,7 @@ export default {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  color: black;
 }
 
 .modal-content {
@@ -67,22 +72,31 @@ export default {
   width: 80%;
 }
 
+form > div {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
 label {
-  color: black;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 24px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+input {
+  width: 60%;
+  padding: 16px 8px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 </style>
