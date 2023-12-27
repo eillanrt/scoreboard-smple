@@ -31,11 +31,11 @@ export default {
     return {
       team1: {
         name: localStorage.getItem('team1Name') || 'Team 1',
-        score: 0 || Number(localStorage.getItem('team1Score')),
+        score: Number(localStorage.getItem('team1Score')) || 0,
       },
       team2: {
         name: localStorage.getItem('team2Name') || 'Team 2',
-        score: 0 || Number(localStorage.getItem('team2Score')),
+        score: Number(localStorage.getItem('team2Score')) || 0,
       },
       showModal: localStorage.length === 0,
     }
