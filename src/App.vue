@@ -68,7 +68,7 @@ export default {
 }
 
 body {
-  background-color: #000039;
+  background-color: #307790;
   color: white;
 }
 

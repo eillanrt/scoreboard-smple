@@ -13,4 +13,17 @@ export default {
   },
 }
 </script>
-<style></style>
+<style scoped>
+button {
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e2e2e2;
+}
+</style>

@@ -39,17 +39,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .score-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 200px;
   border: 1px solid black;
   border-radius: 10px;
   margin: 10px;
-  padding: 10px;
+  padding: 16px;
+  background-color: #122329;
 }
 </style>

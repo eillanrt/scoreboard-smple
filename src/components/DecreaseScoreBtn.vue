@@ -13,4 +13,20 @@ export default {
   },
 }
 </script>
-<style></style>
+<style scoped>
+.decreaded-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px;
+}
+
+button {
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+</style>

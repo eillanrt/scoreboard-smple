@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div class="increase-score-btns-container">
     <IncreaseScoreBtn
       v-for="score in [1, 2, 3]"
       :key="score"
@@ -22,4 +22,11 @@ export default {
   },
 }
 </script>
-<style lang=""></style>
+<style scoped>
+.increase-score-btns-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px;
+}
+</style>
