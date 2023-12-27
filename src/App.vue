@@ -1,5 +1,6 @@
 <template>
   <div class="score-app">
+    <TeamNamesPopup @teamNamesSelected="closeModal" v-if="showModal" />
     <div class="scorers">
       <Scorer
         v-for="i in [1, 2]"
@@ -17,24 +18,26 @@
 <script>
 import Scorer from './components/Scorer.vue'
 import ResetScores from './components/ResetScores.vue'
+import TeamNamesPopup from './components/TeamNamesPopup.vue'
 
 export default {
   name: 'App',
   components: {
     Scorer,
     ResetScores,
-    ResetScores,
+    TeamNamesPopup,
   },
   data() {
     return {
       team1: {
-        name: 'UNOR',
+        name: localStorage.getItem('team1Name') || 'Team 1',
         score: 0 || Number(localStorage.getItem('team1Score')),
       },
       team2: {
-        name: 'La salle',
+        name: localStorage.getItem('team2Name') || 'Team 2',
         score: 0 || Number(localStorage.getItem('team2Score')),
       },
+      showModal: localStorage.length === 0,
     }
   },
   methods: {
@@ -54,6 +57,16 @@ export default {
       this.team1.score = 0
       this.team2.score = 0
       localStorage.clear()
+    },
+    openModal() {
+      this.showModal = true
+    },
+    closeModal(teamNames) {
+      this.team1.name = teamNames.team1
+      this.team2.name = teamNames.team2
+      localStorage.setItem('team1Name', this.team1.name)
+      localStorage.setItem('team2Name', this.team2.name)
+      this.showModal = false
     },
   },
 }
