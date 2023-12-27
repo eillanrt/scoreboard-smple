@@ -10,19 +10,20 @@
         :score="i === 1 ? team1.score : team2.score"
       />
     </div>
-    <div class="reset-wrap">
-      <button @click="reset">RESET</button>
-    </div>
+    <ResetScores @resetScores="resetScores" />
   </div>
 </template>
 
 <script>
 import Scorer from './components/Scorer.vue'
+import ResetScores from './components/ResetScores.vue'
 
 export default {
   name: 'App',
   components: {
     Scorer,
+    ResetScores,
+    ResetScores,
   },
   data() {
     return {
@@ -49,7 +50,7 @@ export default {
       this[teamId].score -= points
       localStorage.setItem(teamId + 'Score', this[teamId].score)
     },
-    reset() {
+    resetScores() {
       this.team1.score = 0
       this.team2.score = 0
       localStorage.clear()
