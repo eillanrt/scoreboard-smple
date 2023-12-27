@@ -52,6 +52,7 @@ export default {
     reset() {
       this.team1.score = 0
       this.team2.score = 0
+      localStorage.clear()
     },
   },
 }
