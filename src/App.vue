@@ -103,4 +103,24 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 640px) {
+  .score-app {
+    width: 100%;
+  }
+  .scorers {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    height: auto;
+  }
+  .scorers {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>

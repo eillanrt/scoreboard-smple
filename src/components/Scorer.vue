@@ -52,4 +52,10 @@ export default {
   padding: 16px;
   background-color: #122329;
 }
+
+@media (max-width: 480px) {
+  .score-wrap {
+    width: 70%;
+  }
+}
 </style>
