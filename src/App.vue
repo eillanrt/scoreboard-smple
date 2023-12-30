@@ -43,7 +43,6 @@ export default {
   methods: {
     increaseBy(teamId, points) {
       this[teamId].score += points
-      localStorage.setItem(teamId + 'Score', this[teamId].score)
     },
     decreaseBy(teamId, points) {
       if (this[teamId].score - points < 0) {
@@ -51,7 +50,6 @@ export default {
       }
 
       this[teamId].score -= points
-      localStorage.setItem(teamId + 'Score', this[teamId].score)
     },
     resetScores() {
       this.team1.score = 0
