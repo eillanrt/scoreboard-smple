@@ -37,7 +37,7 @@ export default {
         name: localStorage.getItem('team2Name') || 'Team 2',
         score: Number(localStorage.getItem('team2Score')),
       },
-      showModal: localStorage.length === 0,
+      showModal: localStorage.getItem('team1Name') === null,
     }
   },
   methods: {
@@ -56,7 +56,7 @@ export default {
     resetScores() {
       this.team1.score = 0
       this.team2.score = 0
-      localStorage.clear()
+      this.showModal = true
     },
     openModal() {
       this.showModal = true
@@ -64,9 +64,21 @@ export default {
     closeModal(teamNames) {
       this.team1.name = teamNames.team1
       this.team2.name = teamNames.team2
-      localStorage.setItem('team1Name', this.team1.name)
-      localStorage.setItem('team2Name', this.team2.name)
       this.showModal = false
+    },
+  },
+  watch: {
+    'team1.score': function () {
+      localStorage.setItem('team1Score', this.team1.score)
+    },
+    'team2.score': function () {
+      localStorage.setItem('team2Score', this.team2.score)
+    },
+    'team1.name': function () {
+      localStorage.setItem('team1Name', this.team1.name)
+    },
+    'team2.name': function () {
+      localStorage.setItem('team2Name', this.team2.name)
     },
   },
 }

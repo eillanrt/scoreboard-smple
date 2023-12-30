@@ -28,8 +28,8 @@ export default {
   },
   data() {
     return {
-      team1Name: '',
-      team2Name: '',
+      team1Name: localStorage.getItem('team1Name') || '',
+      team2Name: localStorage.getItem('team2Name') || '',
     }
   },
   methods: {
