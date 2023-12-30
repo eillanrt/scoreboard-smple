@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <button @click="$emit('increaseBy', teamId, score)">+{{ score }}</button>
 </template>
 <script>

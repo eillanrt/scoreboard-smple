@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div class="score">
     <h1>
       <slot></slot>

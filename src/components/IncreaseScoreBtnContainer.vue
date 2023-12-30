@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div class="increase-score-btns-container">
     <IncreaseScoreBtn
       v-for="score in [1, 2, 3]"
