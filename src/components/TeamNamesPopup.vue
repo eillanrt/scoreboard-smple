@@ -72,6 +72,11 @@ export default {
   width: 80%;
 }
 
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 form > div {
   margin: 0 auto 15px;
   text-align: center;
@@ -98,5 +103,14 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .modal-content {
+    width: 90%;
+  }
+  input {
+    width: 100%;
+  }
 }
 </style>
